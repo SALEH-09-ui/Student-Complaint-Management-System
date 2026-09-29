@@ -1,154 +1,92 @@
+<div align="center">
+
 🎓 Student Complaint Management System
 
-<p align="center">
-<b>Web-Based Student Complaint Management System</b><br>
-A PHP and MySQL based academic web application for submitting, tracking, and managing student complaints.
+Web-Based Student Complaint Management System
+
+A simple and structured web application for submitting, tracking, and managing student complaints.
+
+<p>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white">
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white">
 </p>
 
-<p align="center">
+</div>
 
+📌 System Overview
 
+The Student Complaint Management System (SCMS) is a PHP and MySQL based web application designed to digitalize the process of submitting and managing student complaints.
 
+The system provides two main interfaces:
 
+👨‍🎓 Student Panel
 
+Student registration and login
 
+Submit complaints
 
+Anonymous complaint option
 
-</p>
+View complaint history
 
-📌 Project Overview
+View complaint details and status
 
-The Student Complaint Management System (SCMS) provides a structured platform where students can submit complaints and track their progress.
+Receive administrator feedback
 
-The system has two main interfaces:
+Withdraw complaints
 
-👨‍🎓 Student Panel — registration, login, complaint submission, complaint history, details, status, feedback, withdrawal, and password management.
+Change password
 
-🛡️ Administrator Panel — secure login, complaint review, status updates, feedback, deletion, and logout.
+🛡️ Administrator Panel
 
-The application uses HTML, CSS, JavaScript, PHP, and MySQL and is designed to run locally through XAMPP.
+Secure administrator login
 
-🎯 Objectives
+Protected dashboard
 
-Provide a digital complaint submission platform.
+View all complaints
 
-Store complaint information in MySQL.
+View individual complaint details
 
-Allow students to track complaint status.
+Update complaint status
 
-Support anonymous complaints.
+Provide feedback
 
-Allow administrators to process complaints and provide feedback.
+Delete complaints
 
-Store passwords securely using PHP password hashing.
-
-Protect administrator pages using PHP sessions.
-
-Demonstrate practical frontend, backend, database, and Git collaboration.
-
-✨ Key Features
-
-👨‍🎓 Student Features
-
-✅ Student registration
-
-✅ Student login
-
-✅ Complaint submission
-
-✅ Anonymous complaint option
-
-✅ Complaint history
-
-✅ Individual complaint details
-
-✅ Complaint status tracking
-
-✅ Administrator feedback viewing
-
-✅ Complaint withdrawal
-
-✅ Password change
-
-✅ Client-side validation
-
-🛡️ Administrator Features
-
-🔐 Secure administrator login
-
-🔒 PHP session-based authentication
-
-📋 View all complaints
-
-🔎 View individual complaint details
-
-🔄 Update complaint status
-
-💬 Provide feedback
-
-🗑️ Delete complaints
-
-🚪 Administrator logout
-
-🛡️ Protected administrator pages
+Administrator logout
 
 🔄 System Workflow
 
+Student
+   │
+   ▼
+Register / Login
+   │
+   ▼
+Submit Complaint
+   │
+   ▼
+PHP Backend
+   │
+   ▼
+MySQL Database
+   │
+   ▼
+Administrator
+   │
+   ├── Review Complaint
+   ├── Update Status
+   └── Provide Feedback
+   │
+   ▼
+Student Views Status & Feedback
+
+🖼️ Workflow Diagram
 
 
-Workflow
-
-Student registers or logs in.
-
-Student submits a complaint.
-
-PHP validates and processes the request.
-
-Complaint data is stored in MySQL.
-
-Student can view complaint history and details.
-
-Administrator logs into the administrator panel.
-
-Administrator reviews complaints.
-
-Administrator updates status and/or provides feedback.
-
-Changes are stored in MySQL.
-
-Student can view the updated status and feedback.
-
-🏗️ System Architecture
-
-┌──────────────────────┐
-│       Student        │
-│      Web Browser     │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ HTML / CSS / JS      │
-│ Frontend Interface   │
-└──────────┬───────────┘
-           │ HTTP Requests
-           ▼
-┌──────────────────────┐
-│       PHP Layer      │
-│ Validation + Logic   │
-└──────────┬───────────┘
-           │ SQL
-           ▼
-┌──────────────────────┐
-│        MySQL         │
-│     scms_db          │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ Administrator Panel  │
-│ Review / Update /    │
-│ Feedback / Delete    │
-└──────────────────────┘
 
 🧰 Technology Stack
 
@@ -162,423 +100,131 @@ Webpage structure
 
 CSS3
 
-Interface design
+Interface design and styling
 
 JavaScript
 
-Client-side interaction
+Client-side interaction and requests
 
 PHP
 
-Server-side processing
+Backend processing and database operations
 
 MySQL
 
-Persistent data storage
+Data storage
 
 XAMPP
 
-Apache and MySQL local server
+Local Apache and MySQL environment
 
-phpMyAdmin
+Git & GitHub
 
-Database administration
+Version control and collaboration
 
-Git
+🗄️ Database
 
-Version control
+Database: scms_db
 
-GitHub
+Main tables:
 
-Repository and collaboration
+users — student account information
 
-🗄️ Database Design
+complaints — complaint details, status, and feedback
 
-Database name:
+admins — administrator account information
 
-scms_db
+The complaints table is connected to the users table through user_id.
 
-users
+🔐 Security
 
-Field
+The system includes basic security mechanisms such as:
 
-Description
+Password hashing using PHP password_hash()
 
-id
+Password verification using password_verify()
 
-Primary key
+PHP session-based administrator authentication
 
-name
+Prepared SQL statements
 
-Student name
+User-specific complaint retrieval
 
-email
-
-Unique student email
-
-batch
-
-Student batch
-
-password
-
-Hashed password
-
-created_at
-
-Account creation time
-
-complaints
-
-Field
-
-Description
-
-id
-
-Primary key
-
-user_id
-
-Related student
-
-student_name
-
-Student name
-
-batch
-
-Student batch
-
-is_anonymous
-
-Anonymous complaint flag
-
-title
-
-Complaint title
-
-description
-
-Complaint details
-
-status
-
-Processing / Approved / Rejected
-
-feedback
-
-Administrator feedback
-
-created_at
-
-Creation time
-
-updated_at
-
-Last update time
-
-admins
-
-Field
-
-Description
-
-id
-
-Primary key
-
-name
-
-Administrator name
-
-email
-
-Unique administrator email
-
-password
-
-Hashed password
-
-created_at
-
-Account creation time
-
-🔐 Authentication & Security
-
-The system uses:
-
-PHP password_hash() for password storage.
-
-PHP password_verify() for login verification.
-
-Prepared SQL statements for database operations.
-
-PHP sessions for administrator authentication.
-
-Protected administrator pages.
-
-User-specific complaint retrieval.
-
-Administrator-only complaint deletion.
+Protected administrator operations
 
 📂 Project Structure
 
 SCMS/
 │
-├── README.md
-├── system-workflow.png
-│
 ├── Student Pages
-│   ├── login.html
-│   ├── signup.html
-│   ├── home.html
-│   ├── submit-complaint.html
-│   ├── my-complaints.html
-│   ├── complaint-details.html
-│   └── profile.html
-│
 ├── Administrator Pages
-│   ├── admin-login.html
-│   ├── admin-dashboard.html
-│   ├── admin-complaints.html
-│   └── admin-complaint-details.html
-│
 ├── PHP Backend
-│   ├── db.php
-│   ├── login.php
-│   ├── signup.php
-│   ├── submit-complaint.php
-│   ├── get-my-complaints.php
-│   ├── get-complaint.php
-│   ├── change-password.php
-│   ├── withdraw-complaint.php
-│   ├── admin-login.php
-│   ├── check-admin.php
-│   ├── admin-logout.php
-│   ├── get-all-complaints.php
-│   ├── get-admin-complaint.php
-│   ├── update-complaint.php
-│   └── delete-complaint.php
-│
 ├── script.js
-└── style.css
-
-🚀 How to Run
-
-1. Install XAMPP
-
-Make sure Apache and MySQL are available.
-
-2. Place the project
-
-C:\xampp\htdocs\SCMS
-
-3. Start XAMPP
-
-Start:
-
-Apache
-MySQL
-
-4. Create the database
-
-Open:
-
-http://localhost/phpmyadmin
-
-Create:
-
-scms_db
-
-Then create the required tables:
-
-users
-complaints
-admins
-
-5. Open the project
-
-http://localhost/SCMS/
-
-⚠️ Do not use VS Code Live Server. PHP and MySQL require the XAMPP Apache server.
+├── style.css
+├── db.php
+├── README.md
+└── system-workflow.PNG
 
 👥 Team Contributions
 
+Member
+
+Main Contribution
+
 S.M. Saleh Ahmed
 
-Student-side HTML pages
-
-CSS and interface design
-
-Student-side integration
-
-Registration and login integration
-
-Complaint submission integration
-
-Project documentation and repository organization
+Student-side UI, HTML/CSS, integration, documentation
 
 Sadiya
 
-Student complaint module
-
-Complaint details
-
-Complaint history retrieval
-
-Password change functionality
-
-Student profile functionality
-
-Related PHP backend integration
+Student complaint module and related PHP functionality
 
 Farin
 
-Administrator module
-
-Administrator login interface
-
-Administrator dashboard
-
-Complaint management interface
-
-Administrator authentication
-
-Complaint retrieval backend
+Administrator module and authentication
 
 Farhana
 
-Administrator complaint-management operations
+Complaint management operations and related backend
 
-Administrator complaint details
-
-Complaint status update
-
-Complaint deletion
-
-Administrator logout
-
-Withdrawal-related backend functionality
-
-🌿 GitHub Branch Structure
+🌿 GitHub Branches
 
 main
-│
 ├── saleh
 ├── sadiya
 ├── farin
 └── farhana
 
-The main branch contains the complete project. The member branches organize the work associated with each team member.
+The main branch contains the integrated project, while individual branches contain each member's assigned work.
 
-🧪 Main Modules
+🚀 Running the Project
 
-Student Module
+Install and open XAMPP.
 
-Registration
-     ↓
-Login
-     ↓
-Student Home
-     ↓
-Submit Complaint
-     ↓
-My Complaints
-     ↓
-Complaint Details
-     ↓
-Status / Feedback
+Start Apache and MySQL.
 
-Administrator Module
+Place the project inside:
 
-Admin Login
-     ↓
-Authentication
-     ↓
-Admin Dashboard
-     ↓
-View Complaints
-     ↓
-Complaint Details
-     ↓
-Update Status / Feedback
-     ↓
-Delete / Manage Complaint
-     ↓
-Logout
+C:\xampp\htdocs\SCMS
 
-📋 Complaint Status
+Create the scms_db database in phpMyAdmin.
 
-Status
+Open:
 
-Meaning
+http://localhost/SCMS/
 
-processing
-
-Complaint is currently being reviewed
-
-approved
-
-Complaint has been approved
-
-rejected
-
-Complaint has been rejected
-
-🔮 Future Improvements
-
-📧 Email notifications
-
-🔔 Real-time notifications
-
-📊 Administrator analytics dashboard
-
-🔎 Advanced complaint search and filtering
-
-📱 Improved mobile responsiveness
-
-👥 Multiple administrator roles
-
-📝 Complaint categories
-
-📎 File attachment support
-
-☁️ Production deployment
-
-🛡️ Additional security and access control
-
-🎓 Academic Purpose
-
-This project demonstrates practical understanding of:
-
-Frontend web development
-
-HTML and CSS
-
-JavaScript
-
-PHP
-
-MySQL
-
-CRUD operations
-
-Authentication
-
-Session management
-
-Database integration
-
-Git and GitHub collaboration
+⚠️ Run the project through XAMPP Apache, not VS Code Live Server.
 
 📌 Project Status
 
 Completed Academic Project
 
-The system currently supports student registration, authentication, complaint submission, complaint tracking, administrator complaint management, status updates, feedback, deletion, withdrawal, and password management.
+The system currently supports student authentication, complaint submission and tracking, administrator complaint management, status updates, feedback, deletion, withdrawal, and password management.
 
-<p align="center">
-<b>Student Complaint Management System</b><br>
+<div align="center">
+
+🎓 Student Complaint Management System
+
 Academic Web Development Project
-</p>
+
+</div>
