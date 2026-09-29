@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complaints | Admin Panel</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         ADMIN COMPLAINTS PAGE
+    ========================== -->
+
+    <main class="dashboard-page">
+
+        <!-- =========================
+             TOP NAVIGATION
+        ========================== -->
+
+        <nav class="top-navbar">
+
+            <a href="admin-dashboard.html" class="nav-brand">
+
+                <div class="nav-logo">
+                    SC
+                </div>
+
+                <div>
+                    <h1>Student Complaint</h1>
+                    <span>Administration Panel</span>
+                </div>
+
+            </a>
+
+
+            <div class="nav-right">
+
+                <span class="admin-label">
+                    ADMIN
+                </span>
+
+                <a
+                    href="admin-dashboard.html"
+                    class="profile-btn"
+                >
+                    Dashboard
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- =========================
+             PAGE CONTENT
+        ========================== -->
+
+        <section class="dashboard-content">
+
+            <!-- Page Header -->
+
+            <div class="dashboard-heading">
+
+                <div>
+
+                    <p class="dashboard-label">
+                        COMPLAINT MANAGEMENT
+                    </p>
+
+                    <h2>
+                        All Complaints
+                    </h2>
+
+                    <p>
+                        Review and manage complaints submitted by students.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 COMPLAINT STATISTICS
+            ========================== -->
+
+            <div class="complaint-summary">
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">
+                        #
+                    </div>
+
+                    <div>
+
+                        <span>Total</span>
+
+                        <strong>
+                            3
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon processing-icon">
+                        ◷
+                    </div>
+
+                    <div>
+
+                        <span>Processing</span>
+
+                        <strong>
+                            1
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon approved-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>Approved</span>
+
+                        <strong>
+                            1
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon rejected-icon">
+                        ×
+                    </div>
+
+                    <div>
+
+                        <span>Rejected</span>
+
+                        <strong>
+                            1
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 COMPLAINT LIST
+            ========================== -->
+
+            <div class="complaints-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h3>
+                            Recent Complaints
+                        </h3>
+
+                        <p>
+                            Complaints are displayed from newest to oldest.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     COMPLAINT #001
+                ========================== -->
+
+                <article class="complaint-card admin-complaint-card">
+
+                    <div class="complaint-card-top">
+
+                        <div>
+
+                            <span class="complaint-number">
+                                Complaint #001
+                            </span>
+
+                            <h3>
+                                Classroom facilities need improvement
+                            </h3>
+
+                        </div>
+
+                        <span class="status-badge processing">
+                            Processing
+                        </span>
+
+                    </div>
+
+
+                    <div class="complaint-card-info">
+
+                        <span>
+                            Student: Anonymous
+                        </span>
+
+                        <span>
+                            Batch: 51
+                        </span>
+
+                        <span>
+                            Date: 28 September 2026
+                        </span>
+
+                    </div>
+
+
+                    <p class="complaint-preview">
+
+                        The classroom fan and several lights are not
+                        functioning properly. This is creating difficulty
+                        for students during regular classes...
+
+                    </p>
+
+
+                    <div class="complaint-card-bottom">
+
+                        <span class="feedback-preview">
+                            Feedback: Under review
+                        </span>
+
+                        <a
+                            href="admin-complaint-details.html"
+                            class="view-btn"
+                        >
+                            View Complaint →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     COMPLAINT #002
+                ========================== -->
+
+                <article class="complaint-card admin-complaint-card">
+
+                    <div class="complaint-card-top">
+
+                        <div>
+
+                            <span class="complaint-number">
+                                Complaint #002
+                            </span>
+
+                            <h3>
+                                Library seating problem
+                            </h3>
+
+                        </div>
+
+                        <span class="status-badge approved">
+                            Approved
+                        </span>
+
+                    </div>
+
+
+                    <div class="complaint-card-info">
+
+                        <span>
+                            Student: Rahim Ahmed
+                        </span>
+
+                        <span>
+                            Batch: 50
+                        </span>
+
+                        <span>
+                            Date: 25 September 2026
+                        </span>
+
+                    </div>
+
+
+                    <p class="complaint-preview">
+
+                        There are not enough seats available in the
+                        library during regular study hours...
+
+                    </p>
+
+
+                    <div class="complaint-card-bottom">
+
+                        <span class="feedback-preview">
+                            Feedback: Issue forwarded to authority.
+                        </span>
+
+                        <a
+                            href="admin-complaint-details.html"
+                            class="view-btn"
+                        >
+                            View Complaint →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     COMPLAINT #003
+                ========================== -->
+
+                <article class="complaint-card admin-complaint-card">
+
+                    <div class="complaint-card-top">
+
+                        <div>
+
+                            <span class="complaint-number">
+                                Complaint #003
+                            </span>
+
+                            <h3>
+                                Water supply issue
+                            </h3>
+
+                        </div>
+
+                        <span class="status-badge rejected">
+                            Rejected
+                        </span>
+
+                    </div>
+
+
+                    <div class="complaint-card-info">
+
+                        <span>
+                            Student: Anonymous
+                        </span>
+
+                        <span>
+                            Batch: 51
+                        </span>
+
+                        <span>
+                            Date: 20 September 2026
+                        </span>
+
+                    </div>
+
+
+                    <p class="complaint-preview">
+
+                        Water supply is not available in the building
+                        after a certain period of the day...
+
+                    </p>
+
+
+                    <div class="complaint-card-bottom">
+
+                        <span class="feedback-preview">
+                            Feedback: Duplicate complaint.
+                        </span>
+
+                        <a
+                            href="admin-complaint-details.html"
+                            class="view-btn"
+                        >
+                            View Complaint →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     EMPTY STATE
+                ========================== -->
+
+                <div
+                    class="empty-complaints"
+                    style="display: none;"
+                >
+
+                    <div class="empty-icon">
+                        !
+                    </div>
+
+                    <h3>
+                        No Complaints Found
+                    </h3>
+
+                    <p>
+                        There are currently no complaints in the system.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Back Button -->
+
+            <div class="detail-actions">
+
+                <a
+                    href="admin-dashboard.html"
+                    class="secondary-btn"
+                >
+                    ← Back to Dashboard
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                Student Complaint Management System
+            </p>
+
+            <span>
+                Administration Panel &copy; 2026
+            </span>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
