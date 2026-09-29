@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Submit Complaint | Student Complaint Management System</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Main JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         SUBMIT COMPLAINT PAGE
+    ========================== -->
+
+    <main class="dashboard-page">
+
+        <!-- =========================
+             TOP NAVIGATION
+        ========================== -->
+
+        <nav class="top-navbar">
+
+            <a href="home.html" class="nav-brand">
+
+                <div class="nav-logo">
+                    SC
+                </div>
+
+                <div>
+                    <h1>Student Complaint</h1>
+                    <span>Management System</span>
+                </div>
+
+            </a>
+
+
+            <div class="nav-right">
+
+                <a href="home.html" class="profile-btn">
+                    Home
+                </a>
+
+                <a href="profile.html" class="profile-btn">
+                    Profile
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- =========================
+             PAGE CONTENT
+        ========================== -->
+
+        <section class="dashboard-content complaint-page">
+
+            <!-- Page Header -->
+
+            <div class="dashboard-heading">
+
+                <div>
+
+                    <p class="dashboard-label">
+                        COMPLAINT CENTER
+                    </p>
+
+                    <h2>
+                        Submit a Complaint
+                    </h2>
+
+                    <p>
+                        Tell us about an issue that needs attention.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 COMPLAINT FORM
+            ========================== -->
+
+            <div class="complaint-form-card">
+
+                <form
+                    id="complaintForm"
+                    onsubmit="return validateComplaintForm(event);"
+                >
+
+                    <!-- Student Information -->
+
+                    <div class="form-section-title">
+
+                        <h3>
+                            Student Information
+                        </h3>
+
+                        <p>
+                            Provide your information or submit anonymously.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Name -->
+
+                    <div class="form-group">
+
+                        <label for="complaintName">
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="complaintName"
+                            name="complaintName"
+                            placeholder="Enter your name"
+                        >
+
+                    </div>
+
+
+                    <!-- Anonymous Option -->
+
+                    <div class="anonymous-option">
+
+                        <input
+                            type="checkbox"
+                            id="anonymousComplaint"
+                            name="anonymousComplaint"
+                            onchange="toggleAnonymousName();"
+                        >
+
+                        <label for="anonymousComplaint">
+
+                            <strong>
+                                Submit anonymously
+                            </strong>
+
+                            <span>
+                                Your name will not be shown to the administration
+                                in the complaint view.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Batch -->
+
+                    <div class="form-group">
+
+                        <label for="complaintBatch">
+                            Batch
+                        </label>
+
+                        <input
+                            type="text"
+                            id="complaintBatch"
+                            name="complaintBatch"
+                            placeholder="Enter your batch"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Complaint -->
+
+                    <div class="form-group">
+
+                        <label for="complaintText">
+                            Your Complaint
+                        </label>
+
+                        <textarea
+                            id="complaintText"
+                            name="complaintText"
+                            placeholder="Describe your complaint clearly..."
+                            rows="8"
+                            maxlength="1000"
+                            required
+                        ></textarea>
+
+                        <div class="character-count">
+                            <span id="characterCount">0</span>/1000
+                        </div>
+
+                    </div>
+
+
+                    <!-- Important Notice -->
+
+                    <div class="complaint-notice">
+
+                        <div class="info-symbol">
+                            i
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Before submitting
+                            </h4>
+
+                            <p>
+                                Please make sure your complaint is clear,
+                                accurate, and respectful. False or inappropriate
+                                complaints may be removed by the administration.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="complaint-actions">
+
+                        <a
+                            href="home.html"
+                            class="secondary-btn"
+                        >
+                            Back
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="primary-btn complaint-submit-btn"
+                        >
+                            Send Complaint
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                Student Complaint Management System
+            </p>
+
+            <span>
+                &copy; 2026 All Rights Reserved
+            </span>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

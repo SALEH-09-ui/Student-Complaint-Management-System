@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Student Complaint Management System</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Main JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         LOGIN PAGE
+    ========================== -->
+
+    <main class="auth-page">
+
+        <div class="auth-container">
+
+            <!-- =========================
+                 LEFT SIDE
+            ========================== -->
+
+            <section class="auth-intro">
+
+                <div class="brand">
+
+                    <div class="brand-logo">
+                        SC
+                    </div>
+
+                    <div class="brand-text">
+                        <h1>Student Complaint</h1>
+                        <p>Management System</p>
+                    </div>
+
+                </div>
+
+
+                <div class="intro-content">
+
+                    <h2>
+                        Welcome<br>
+                        <span>Back.</span>
+                    </h2>
+
+                    <p>
+                        Login to submit complaints, check your complaint
+                        history, and receive updates from the administration.
+                    </p>
+
+                </div>
+
+
+                <div class="intro-features">
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>Secure Access</h3>
+                            <p>Your account is protected with secure login.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>Track Complaints</h3>
+                            <p>Keep track of all your submitted complaints.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>Stay Updated</h3>
+                            <p>View status updates and admin feedback.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 RIGHT SIDE
+            ========================== -->
+
+            <section class="auth-form-container">
+
+                <div class="form-header">
+
+                    <p class="form-label">
+                        STUDENT LOGIN
+                    </p>
+
+                    <h2>
+                        Welcome Back
+                    </h2>
+
+                    <p>
+                        Enter your account details to continue.
+                    </p>
+
+                </div>
+
+
+                <!-- Login Form -->
+
+                <form
+                    id="loginForm"
+                    class="auth-form"
+                    onsubmit="return validateLoginForm(event);"
+                >
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Student Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            name="loginEmail"
+                            placeholder="Enter your student email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <div class="password-field">
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                name="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="togglePassword('loginPassword', this)"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Login
+                    </button>
+
+
+                    <!-- Signup Link -->
+
+                    <div class="auth-switch">
+
+                        <span>
+                            Don't have an account?
+                        </span>
+
+                        <a href="signup.html">
+                            Create Account
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
